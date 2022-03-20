@@ -26,7 +26,22 @@ app.get('/api/notes', (req, res) => {
 })
 
 app.post('/api/notes', (req, res) => {
+    console.log("inside post")
+    fs.readFile('db/db.json', 'utf-8', (err, data) => {
+        var json = JSON.parse(data)
+        // console.log("text")
+        // console.log('title')
+        // console.log(typeof(json))
+        var newData = {}
+        newData['text'] = req.body['text']
+        newData['title'] = req.body['title']
 
+        json.push(newData);
+        new_json = JSON.stringify(json)
+        fs.writeFile('db.json', new_json, (err, data) => {
+            console.log("callback from writefile");
+        })
+    })
 })
 
 // test endpoint
