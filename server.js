@@ -1,30 +1,32 @@
 const express = require('express')
 const fs = require('fs')
+const path = require('path')
 
 const PORT = process.env.PORT || 3001;
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
-    res.send('index.html');
+    res.sendFile(path.join(__dirname, '/public/index.html'));
 })
 
 app.get('/notes', (req, res) => {
-    res.send('notes.html');
+    res.sendFile(path.join(__dirname, '/public/notes.html'));
 })
 
-
 app.get('/api/notes', (req, res) => {
-    var db = fs.readFile('db/db.json', 'utf-8', (err, data) => {
+    fs.readFile('db/db.json', 'utf-8', (err, data) => {
         if (err) { console.log(err); return; }
         console.log("Successfully read json")
-        console.log(db);
         res.send(data);
     });
-    
-    
+})
+
+app.post('/api/notes', (req, res) => {
+
 })
 
 // test endpoint
