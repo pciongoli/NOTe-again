@@ -23,6 +23,7 @@
 * Create a note by giving it a title and note message. Once finished with the note refresh the browser and your new ntoe will be saved to Note bar on the left hand side of the page! 
 
 ## Deployed Application
+![Deployed_Application](https://user-images.githubusercontent.com/94708192/159199940-3efddf4d-d9fa-4077-9c40-294becd2afae.png)
 
 
 ## Thank you for viewing!
