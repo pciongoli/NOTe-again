@@ -1,6 +1,8 @@
 const express = require('express')
 const fs = require('fs')
 const path = require('path')
+// imported unique id generator
+// will always create unique id 
 const uniqid = require('uniqid')
 
 const PORT = process.env.PORT || 3001;
@@ -43,7 +45,7 @@ app.post('/api/notes', (req, res) => {
         json.push(newData);
 
         // new_json = JSON.stringify(json)
-        fs.writeFile('db/db.json', JSON.stringify(json) , (err, data) => {
+        fs.writeFile('db/db.json', JSON.stringify(json), (err, data) => {
             console.log("callback from writefile");
         })
     })
@@ -55,6 +57,7 @@ app.post('/test', (req, res) => {
     res.send("Hi this is a note" + temp);
 })
 
+// connection to server
 app.listen(PORT, () => {
     console.log('Server connected at:', PORT);
 });

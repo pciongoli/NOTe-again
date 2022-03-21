@@ -1,1 +1,8 @@
-[{"id":"Test","title":"Test Title","text":"Test text"},{"id":"9r1yt11g3l0zqwafb","text":"sdfsdf","title":"dsfsdf"}]
+[
+    {
+        "id": "Test",
+        "title": "Test Title",
+        "text": "Test text"
+    }
+]
+
