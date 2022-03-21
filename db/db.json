@@ -1,1 +1,8 @@
-[{"id":"Test","title":"Test Title","text":"Test text"},{"id":"9r1yt1419l10420qf","text":"Welcome to Note Taker! Enjoy organizing your day with this helpful notetaker application","title":"Hello this is a New Note"},{"id":"9r1yt1419l1048iws","text":"asfdafsadf","title":"This is another New Note"}]
+[
+    {
+        "id": "Test",
+        "title": "Test Title",
+        "text": "Test text"
+    }
+]
+
